@@ -1,0 +1,413 @@
+
+        /* Global Styles - FBI-like Mysterious Theme */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto Mono', monospace; /* FBI-style: Clean, typewriter monospace */
+            background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); /* Philippines flood damage background */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgba(26, 0, 0, 0.8); /* Dark red overlay */
+            background-blend-mode: overlay;
+            color: #ffcccc; /* Light red text */
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Darker overlay for readability */
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Navbar Styles - FBI Official with Mystery */
+        nav {
+            background-color: rgba(139, 0, 0, 0.95); /* Semi-transparent dark red */
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(255, 0, 0, 0.3); /* Glowing red shadow */
+            backdrop-filter: blur(5px);
+            border-bottom: 2px solid #ff0000; /* FBI-like red line */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Better vertical alignment */
+        }
+
+        nav ul li {
+            margin: 0 2rem;
+        }
+
+        nav ul li a {
+            color: #ffcccc;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Special Elite', cursive; /* FBI typewriter font for nav */
+            font-size: 1.2rem;
+            transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+            position: relative;
+            text-transform: uppercase; /* Official FBI caps */
+            letter-spacing: 1px;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff0000;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff;
+            transform: scale(1.05);
+            text-shadow: 0 0 10px #ff0000;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Content - Improved Alignment */
+        main {
+            margin-top: 80px;
+            padding: 2rem;
+            animation: fadeIn 1s ease-in;
+            background: rgba(26, 0, 0, 0.85); /* Slightly more opaque for better text contrast */
+            border-radius: 10px;
+            margin: 2rem auto;
+            max-width: 1200px; /* Centered container */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Header Banner for Title - With Provided Image */
+        .header-banner {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Fixed height for banner */
+            background-image: url('https://media.assettype.com/gulfnews%2F2025-10-08%2Fhnvyqf4z%2FVillanueva-Estrada-Discaya-couple-JP-Mendoza-Brice-Hernandez-2.jpg?w=640&auto=format%2Ccompress&fit=max');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .header-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 0, 0, 0.7); /* Dark red overlay for mystery and readability */
+            z-index: 1;
+        }
+
+        .header-banner img {
+            display: none; /* Hide if needed; background handles it */
+        }
+
+        /* Title Overlay on Banner */
+        .title-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        /* Homepage Styles - Classified FBI Vibe (Title now in overlay) */
+        .homepage {
+            text-align: center;
+        }
+
+        .homepage h1 {
+            color: #ff0000;
+            font-family: 'Special Elite', cursive; /* FBI header font */
+            font-size: 3rem;
+            margin: 0; /* Remove margin since it's overlaid */
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Stronger glow for visibility over image */
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #ff0000; /* Official underline */
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            width: auto; /* Auto width for overlay */
+        }
+
+        .homepage p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-style: italic;
+            opacity: 0.9;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* Interactive Cards Grid - 9 Cards, 3x3 Layout for Better Alignment */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns for 9 cards (perfect alignment) */
+            gap: 1.5rem; /* Reduced gap for tighter alignment */
+            margin-top: 2rem;
+            max-width: 100%; /* Full width within main */
+            justify-items: center; /* Center each card horizontally */
+            align-items: start; /* Align tops */
+        }
+
+        .card {
+            background: linear-gradient(145deg, #4d0000, #2a0000);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+            font-family: 'Roboto Mono', monospace;
+            width: 100%; /* Ensure full grid cell width */
+            max-width: 320px; /* Cap width for consistency */
+            min-height: 400px; /* Ensure all cards are the same height for alignment */
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 0, 0, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(139, 0, 0, 0.6);
+            border-color: #ff0000;
+            background: linear-gradient(145deg, #8b0000, #4d0000);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            filter: grayscale(50%) sepia(30%);
+            transition: filter 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #8b0000;
+            display: block;
+            margin-left: auto;
+            margin-right: auto; /* Center images */
+        }
+
+        .card:hover img {
+            filter: grayscale(0%) sepia(0%);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+
+        .card h3 {
+            color: #ff0000;
+            margin-bottom: 0.5rem;
+            font-family: 'Special Elite', cursive;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card .position {
+            color: #ff6666;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .card .description {
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        .card .stolen {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 1rem;
+            text-shadow: 0 0 5px #ff0000;
+            border-top: 1px solid #8b0000;
+            padding-top: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Topic Page Styles */
+        .topic-page {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left; /* Align text left for readability */
+        }
+
+        .topic-page h2 {
+            color: #ff0000;
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            text-shadow: 0 0 10px #ff0000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .topic-list li {
+            background: linear-gradient(145deg, #4d0000, #2a0000);
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            border-left: 4px solid #8b0000;
+            font-family: 'Roboto Mono', monospace;
+            text-align: left; /* Ensure left alignment */
+        }
+
+        .topic-list li:hover {
+            background: linear-gradient(145deg, #8b0000, #4d0000);
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(139, 0, 0, 0.4);
+        }
+
+        /* About Us Page Styles */
+        .about-page {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-page h2 {
+            color: #ff0000;
+            font-family: 'Special Elite', cursive;
+            text-shadow: 0 0 10px #ff0000;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .about-page p {
+            text-align: left; /* Left align paragraphs for better flow */
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(139, 0, 0, 0.95);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+            backdrop-filter: blur(5px);
+            border-top: 2px solid #ff0000;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* Hide non-active sections */
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        /* Responsive Adjustments - Improved for Alignment */
+        @media (max-width: 1024px) {
+            .cards-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+                gap: 1rem;
+            }
+            .header-banner {
+                height: 250px; /* Adjust height on smaller screens */
+            }
+            .homepage h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cards-container {
+                grid-template-columns: 1fr; /* 1 column on mobile for perfect stacking */
+                gap: 1rem;
+            }
+            .homepage h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            main {
+                padding: 1rem;
+                margin: 1rem;
+            }
+            .header-banner {
+                height: 200px;
+            }
+            .title-overlay {
+                padding: 0 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 1rem;
+                max-width: 100%;
+            }
+            .card img {
+                width: 100px;
+                height: 100px;
+            }
+            .homepage h1 {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+        }
